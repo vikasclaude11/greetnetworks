@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------header------------ */
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #010914;
+    margin: 5px;
+    border-radius: 5px;
+    border: 0.5px solid #0b2142;
+    gap: 15px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+nav a:hover{
+    color: #00C8FF;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+}
+
+header img{
+    height: 35px;
+    width: 35px;
+}
+
+.btn{
+    color: white;
+    background-color: #010e20;
+    border: 0.5px solid #0b2142;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 14px;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.btn:hover{
+    color: black;
+    background-color: #00C8FF;
+    scale: 1.02;
+    cursor: pointer;
+}
+
+/* -----------------banner----------- */
+.banner{
+    background-image: url(banner5a.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 40vh;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 30px 20px;
+}
+.banner h1{
+    color: blue;
+    text-shadow: 0px 0px 10px darkblue;
+    font-size: clamp(28px, 8vw, 70px);
+    text-align: center;
+    line-height: 1.2;
+}
+.banner p{
+    color: #00C8FF;
+    font-size: clamp(14px, 3vw, 20px);
+    margin-top: 10px;
+}
+
+/* ---------footer---------------- */
+.footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    background-color: #020810;
+    color: white;
+    padding: 20px;
+    gap: 25px;
+}
+
+.footer button{
+    color: white;
+    background-color: #010914;
+    border: 0.5px solid #0b2142;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 8px 14px;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.footer button:hover{
+    color: black;
+    background-color: #00C8FF;
+    scale: 1.02;
+    cursor: pointer;
+}
+
+.ft,.ftimg{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ft img{
+    width: 60px;
+    height: 60px;
+}
+.ftimg img{
+    width: 45px;
+    height: 45px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+}
+.ftimg img:hover{
+    scale: 1.02;
+    box-shadow: 0px 0px 5px blue;
+    cursor: pointer;
+}
+
+.footerleft,.footercentreleft,.footercentreright,.footerright{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: none;
+    border-bottom: 0.5px solid #010e20;
+    padding: 5px 5px 20px;
+}
+.footerright{
+    border-bottom: none;
+}
+
+.footer h4{
+    color: #00C8FF;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+    font-size: 15px;
+}
+.footer a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: aliceblue;
+    font-size: 14px;
+}
+.footer a:hover{
+    text-shadow: 0px 0px 10px gold;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+}
+ul{
+    list-style: none;
+}
+
+/* =========================================
+   TABLET — 600px and up
+   ========================================= */
+@media (min-width: 600px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    nav{
+        flex-direction: row;
+        width: auto;
+        gap: 25px;
+    }
+    header img{
+        height: 40px;
+        width: 40px;
+    }
+    .btn{
+        font-size: 15px;
+    }
+    .banner{
+        padding: 40px 60px;
+    }
+    .footer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .footerleft,.footercentreleft{
+        border-right: 0.5px solid #010e20;
+        border-bottom: none;
+        padding-bottom: 5px;
+    }
+}
+
+/* =========================================
+   DESKTOP — 992px and up
+   ========================================= */
+@media (min-width: 992px){
+    body{
+        font-size: 17px;
+    }
+    nav a{
+        font-size: 16px;
+    }
+    .banner{
+        height: 50vh;
+        min-height: unset;
+        padding: 50px 100px;
+    }
+    .banner h1{
+        text-align: end;
+    }
+    .footer{
+        grid-template-columns: 25% 20% 20% 25%;
+        padding: 30px;
+    }
+    .footerleft,.footercentreleft,.footercentreright{
+        border-right: 0.5px solid #010e20;
+        border-bottom: none;
+        padding: 5px;
+    }
+    .ft img{
+        width: 80px;
+        height: 80px;
+    }
+    .ftimg img{
+        width: 50px;
+        height: 50px;
+    }
+    .footer h4,
+    .footer a{
+        font-size: 16px;
+    }
+}

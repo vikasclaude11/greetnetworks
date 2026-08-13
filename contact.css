@@ -1,0 +1,350 @@
+/* =========================================================
+   MOBILE-FIRST STYLES
+   Base rules below target small screens (phones) by default.
+   Media queries further down ADD/OVERRIDE styles as the
+   viewport grows (tablet -> 768px, desktop -> 1024px).
+   ========================================================= */
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%; /* 1rem = 16px, lets font sizes scale with rem below */
+}
+
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+/* --------------header------------ */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #010914;
+    margin: 5px;
+    border-radius: 5px;
+    border: 0.5px solid #0b2142;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+nav a:hover{
+    color: #00C8FF;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+}
+
+header img{
+    height: 36px;
+    width: 36px;
+}
+
+.btn{
+    color: white;
+    background-color: #010e20;
+    border: 0.5px solid #0b2142;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.btn:hover{
+    color: black;
+    background-color: #00C8FF;
+    scale: 1.02;
+    cursor: pointer;
+}
+/* --------------header end------------ */
+
+/* -----------------banner----------- */
+.banner{
+    background-image: url(banner5a.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 40vh;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 30px 20px;
+}
+.banner h1{
+    color: blue;
+    text-shadow: 0px 0px 10px darkblue;
+    font-size: clamp(1.75rem, 8vw, 4.375rem); /* fluid: ~28px up to 70px */
+    text-align: center;
+    line-height: 1.1;
+}
+.banner p{
+    color: #00C8FF;
+    font-size: clamp(0.9rem, 3vw, 1.25rem);
+}
+/* -----------------banner end----------- */
+
+/* --------------container 1----------- */
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-transform: capitalize;
+    border: 0.5px solid #0b2142;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, rgb(2, 2, 19), rgb(3, 3, 12), black);
+    gap: 25px;
+}
+legend{
+    font-size: clamp(1.25rem, 6vw, 2.1875rem); /* fluid: ~20px up to 35px */
+    color: blue;
+    text-shadow: 2px 3px 5px #00C8FF;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    font-style: italic;
+}
+label{
+    color: #00C8FF;
+    font-size: clamp(1rem, 4vw, 1.5625rem); /* fluid: ~16px up to 25px */
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-shadow: 2px 3px 5px blue;
+}
+.input{
+    color: #00C8FF;
+    font-size: 1rem;
+    background-color: #0b2142;
+    width: 100%;
+    border: 0.5px solid blue;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.box2 img{
+    width: 40px;
+    height: 40px;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-left: none;
+    border-top: 0.5px solid #0b2142;
+    padding: 15px 0 0 0;
+}
+.info{
+    display: flex;
+    gap: 10px;
+    border: 0.5px solid #0b2142;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+.info:hover{
+    scale: 1.04;
+    box-shadow: 0px 0px 10px 0px blue;
+}
+/* --------------------container1 end--------- */
+
+/* ---------footer---------------- */
+.footer button{
+    color: white;
+    background-color: #010914;
+    border: 0.5px solid #0b2142;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 8px 14px;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.footer button:hover{
+    color: black;
+    background-color: #00C8FF;
+    scale: 1.02;
+    cursor: pointer;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr; /* single column on mobile */
+    align-items: stretch;
+    background-color: #020810;
+    color: white;
+    padding: 20px 15px;
+    gap: 25px;
+}
+.ft,.ftimg{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ft img{
+    width: 60px;
+    height: 60px;
+}
+.ftimg img{
+    width: 40px;
+    height: 40px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+}
+.ftimg img:hover{
+    scale: 1.02;
+    box-shadow: 0px 0px 5px blue;
+    cursor: pointer;
+}
+.footerleft,.footercentreleft,.footercentreright,.footerright{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: none;
+    border-bottom: 0.5px solid #010e20;
+    padding: 0 0 15px 0;
+}
+.footerright{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.footer h4{
+    color: #00C8FF;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+}
+.footer a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: aliceblue;
+}
+.footer a:hover{
+    text-shadow: 0px 0px 10px gold;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* --------------------footer end------------- */
+
+
+/* =========================================================
+   TABLET AND UP (≥768px)
+   ========================================================= */
+@media (min-width: 768px){
+
+    header{
+        justify-content: space-between;
+    }
+    nav{
+        width: auto;
+        gap: 25px;
+    }
+    header img{
+        height: 40px;
+        width: 40px;
+    }
+
+    .banner{
+        padding: 50px 60px;
+        min-height: 45vh;
+    }
+    .banner h1{
+        text-align: end;
+    }
+
+    .container1{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 40px;
+        padding: 20px 50px;
+    }
+
+    .box2{
+        border-left: 0.5px solid #0b2142;
+        border-top: none;
+        padding: 0 0 0 40px;
+        flex: 0 0 auto;
+    }
+
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 25px 30px;
+    }
+    .footerleft,.footercentreleft{
+        border-right: 0.5px solid #010e20;
+        border-bottom: none;
+        padding: 0 15px 0 0;
+    }
+    .footercentreright,.footerright{
+        border-bottom: none;
+        padding: 0;
+    }
+}
+
+/* =========================================================
+   DESKTOP AND UP (≥1024px)
+   ========================================================= */
+@media (min-width: 1024px){
+
+    .banner{
+        height: 50vh;
+        min-height: unset;
+        padding: 50px 100px;
+        background-position: 2px;
+    }
+
+    .container1{
+        margin: 20px 100px;
+        padding: 20px 100px;
+    }
+    .box2{
+        padding-left: 150px;
+    }
+
+    .footer{
+        grid-template-columns: 25% 20% 20% 25%;
+        padding: 30px;
+        gap: 30px;
+    }
+    .footerleft,.footercentreleft,.footercentreright{
+        border-right: 0.5px solid #010e20;
+    }
+}
+
+/* =========================================================
+   LARGE DESKTOP (≥1280px) — restore original wide box2 spacing
+   ========================================================= */
+@media (min-width: 1280px){
+    .box2{
+        padding-left: 250px;
+    }
+}

@@ -1,0 +1,400 @@
+/* =========================================================
+   MOBILE-FIRST STYLES
+   Base rules below target small screens (phones) by default.
+   Media queries further down ADD/OVERRIDE styles as the
+   viewport grows (tablet -> 768px, desktop -> 1024px, large -> 1280px).
+   ========================================================= */
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%; /* 1rem = 16px, lets font sizes scale with rem below */
+}
+
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+/* --------------header------------ */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #010914;
+    margin: 5px;
+    border-radius: 5px;
+    border: 0.5px solid #0b2142;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+nav a:hover{
+    color: #00C8FF;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+}
+
+header img{
+    height: 36px;
+    width: 36px;
+}
+
+.btn{
+    color: white;
+    background-color: #010e20;
+    border: 0.5px solid #0b2142;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.btn:hover{
+    color: black;
+    background-color: #00C8FF;
+    scale: 1.02;
+    cursor: pointer;
+}
+/* --------------header end------------ */
+
+/* -----------------banner----------- */
+.banner{
+    background-image: url(banner4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 40vh;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 30px 20px;
+}
+.banner h1{
+    color: blue;
+    text-shadow: 0px 0px 10px darkblue;
+    font-size: clamp(1.75rem, 8vw, 4.375rem); /* fluid: ~28px up to 70px */
+    text-align: center;
+    line-height: 1.1;
+}
+.banner p{
+    color: #00C8FF;
+    font-size: clamp(0.9rem, 3vw, 1.25rem);
+}
+/* -----------------banner end----------- */
+
+/* ------------------container 1-------------- */
+.container1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 5px;
+    align-items: center;
+    background-color: black;
+    border-radius: 5px;
+    border: 0.5px solid #0b2142;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid #0b2142;
+    border-radius: 5px;
+    background-color: #010914;
+    width: 100%;
+    padding: 15px;
+    text-transform: capitalize;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.box:hover{
+    scale: 1.01;
+    box-shadow: 0px 0px 10px 1px blue;
+}
+.box img{
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px blueviolet;
+}
+.box h3{
+    color: blue;
+    text-shadow: 0px 0px 10px blue;
+}
+.text{
+    padding: 10px;
+}
+/* ------------------container 1 end-------------- */
+
+/* -------------------container2--------------- */
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 15px;
+    margin: 5px;
+    align-items: center;
+    background-color: black;
+    border-radius: 5px;
+    border: 0.5px solid #0b2142;
+    gap: 20px;
+}
+.container2 img{
+    max-width: 100%;
+    height: auto;
+}
+.container2 img:hover{
+    scale: 1.02;
+    cursor: pointer;
+}
+.bottom1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-right: none;
+    border-bottom: 0.5px solid #0b2142;
+    padding: 0 0 20px 0;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 10px blue;
+    width: 100%;
+}
+.bottomleft img{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+.socalimg{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.socalimg img{
+    height: 40px;
+    width: 40px;
+}
+.bottom2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+}
+/* -------------------container2 end--------------- */
+
+/* ---------footer---------------- */
+.footer button{
+    color: white;
+    background-color: #010914;
+    border: 0.5px solid #0b2142;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 8px 14px;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.footer button:hover{
+    color: black;
+    background-color: #00C8FF;
+    scale: 1.02;
+    cursor: pointer;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr; /* single column on mobile */
+    align-items: stretch;
+    background-color: #020810;
+    color: white;
+    padding: 20px 15px;
+    gap: 25px;
+}
+.ft,.ftimg{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ft img{
+    width: 60px;
+    height: 60px;
+}
+.ftimg img{
+    width: 40px;
+    height: 40px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+}
+.ftimg img:hover{
+    scale: 1.02;
+    box-shadow: 0px 0px 5px blue;
+    cursor: pointer;
+}
+.footerleft,.footercentreleft,.footercentreright,.footerright{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: none;
+    border-bottom: 0.5px solid #010e20;
+    padding: 0 0 15px 0;
+}
+.footerright{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.footer h4{
+    color: #00C8FF;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+}
+.footer a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: aliceblue;
+}
+.footer a:hover{
+    text-shadow: 0px 0px 10px gold;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* --------------------footer end------------- */
+
+
+/* =========================================================
+   TABLET AND UP (≥768px)
+   ========================================================= */
+@media (min-width: 768px){
+
+    header{
+        justify-content: space-between;
+    }
+    nav{
+        width: auto;
+        gap: 25px;
+    }
+    header img{
+        height: 40px;
+        width: 40px;
+    }
+
+    .banner{
+        padding: 50px 60px;
+        min-height: 45vh;
+    }
+    .banner h1{
+        text-align: end;
+    }
+
+    .box{
+        flex-direction: row;
+        text-align: left;
+        padding: 20px;
+        gap: 20px;
+    }
+    .box img{
+        height: 220px;
+        width: 220px;
+        max-width: none;
+    }
+    .text{
+        padding: 20px 30px;
+    }
+
+    .container2{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 40px;
+    }
+    .bottom1{
+        flex-direction: row;
+        border-right: 0.5px solid #0b2142;
+        border-bottom: none;
+        padding: 0 40px 0 0;
+        width: auto;
+    }
+    .bottom2{
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 25px 30px;
+    }
+    .footerleft,.footercentreleft{
+        border-right: 0.5px solid #010e20;
+        border-bottom: none;
+        padding: 0 15px 0 0;
+    }
+    .footercentreright,.footerright{
+        border-bottom: none;
+        padding: 0;
+    }
+}
+
+/* =========================================================
+   DESKTOP AND UP (≥1024px)
+   ========================================================= */
+@media (min-width: 1024px){
+
+    .banner{
+        height: 50vh;
+        min-height: unset;
+        padding: 50px 100px;
+        background-position: 2px;
+    }
+
+    .box img{
+        height: 300px;
+        width: 300px;
+    }
+
+    .container2{
+        padding: 10px 200px;
+    }
+    .bottom1{
+        padding-right: 200px;
+    }
+
+    .footer{
+        grid-template-columns: 25% 20% 20% 25%;
+        padding: 30px;
+        gap: 30px;
+    }
+    .footerleft,.footercentreleft,.footercentreright{
+        border-right: 0.5px solid #010e20;
+    }
+}
